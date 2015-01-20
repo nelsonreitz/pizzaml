@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<menu>
+  <category name="pizzas">
+    <item>
+      <name>Ham</name>
+      <price size="small">685</price>
+      <price size="large">1085</price>
+    </item>
+    <item>
+      <name>Hawaiian</name>
+      <price size="small">795</price>
+      <price size="large">1180</price>
+    </item>
+  </category>
+  <category name="Speciality Pizzas">
+    <item>
+      <name>Mediterranean</name>
+      <description>Sliced Tomatoes, Olives, Spinach, Fresh Garlic, Mozzarella &amp; Feta Cheese</description>
+      <price size="small">980</price>
+      <price size="large">1580</price>
+    </item>
+  </category>
+  <category name="Home made Lasagna Ravioli or Manicotti">
+    <item>
+      <name>With Sauce</name>
+      <price>625</price>
+    </item>
+    <item>
+      <name>With Sausage</name>
+      <price>725</price>
+    </item>
+  </category>
+  <category name="Homemade Calzones">
+    <item>
+      <name>Vegetarian</name>
+      <price size="large">735</price>
+    </item>
+  </category>
+  <category name="Wraps">
+    <item>
+      <name>Turkey Club Warp</name>
+      <description>Turkey, Cheese, Lettuce, Tomato, Onion, Mayo</description>
+      <price>495</price>
+    </item>
+  </category>
+</menu>
