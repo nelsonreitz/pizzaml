@@ -1,46 +1,111 @@
 <?xml version="1.0"?>
 <menu>
-  <category name="pizzas">
+  <category>
+    <title>Pizzas</title>
     <item>
       <name>Ham</name>
-      <price size="small">685</price>
-      <price size="large">1085</price>
+      <price size="small">6.85</price>
+      <price size="large">10.85</price>
     </item>
     <item>
       <name>Hawaiian</name>
-      <price size="small">795</price>
-      <price size="large">1180</price>
+      <price size="small">7.95</price>
+      <price size="large">11.80</price>
     </item>
   </category>
-  <category name="Speciality Pizzas">
+  <category>
+    <title>Speciality Pizzas</title>
     <item>
       <name>Mediterranean</name>
       <description>Sliced Tomatoes, Olives, Spinach, Fresh Garlic, Mozzarella &amp; Feta Cheese</description>
-      <price size="small">980</price>
-      <price size="large">1580</price>
+      <price size="small">9.80</price>
+      <price size="large">15.80</price>
     </item>
   </category>
-  <category name="Home made Lasagna Ravioli or Manicotti">
+  <category>  
+    <title>Special Dinners</title>
+    <item>
+      <name>Chicken Wings Dinner</name>
+      <price>7.25</price>
+    </item>
+    <item>
+      <name>Gyro Plate</name>
+      <price>7.25</price>
+    </item>
+  </category>
+  <category>  
+    <title>Side Orders</title>
+    <item>
+      <name>French Fries</name>
+      <price size="small">2.25</price>
+      <price size="large">2.65</price>
+    </item>
+    <item>
+      <name>Buffalo Wings</name>
+      <price>5.75</price>
+    </item>
+  </category>
+  <category>  
+    <title>Salads</title>
+    <item>
+      <name>Garden</name>
+      <price size="small">3.50</price>
+      <price size="large">4.50</price>
+    </item>
+    <item>
+      <name>Greek</name>
+      <price size="small">4.50</price>
+      <price size="large">5.50</price>
+    </item>
+  </category>
+  <category>  
+    <title>Spaghetti or Ziti</title>
+    <item>
+      <name>With Meat Ball</name>
+      <price>6.45</price>
+    </item>
+    <item>
+      <name>With Veal</name>
+      <price>6.45</price>
+    </item>
+  </category>
+  <category>
+    <title>Homemade Lasagna Ravioli or Manicotti</title>
     <item>
       <name>With Sauce</name>
-      <price>625</price>
+      <price>6.25</price>
     </item>
     <item>
       <name>With Sausage</name>
-      <price>725</price>
+      <price>7.25</price>
     </item>
   </category>
-  <category name="Homemade Calzones">
+  <category>  
+    <title>Homemade Calzones</title>
     <item>
       <name>Vegetarian</name>
-      <price size="large">735</price>
+      <price size="large">7.35</price>
     </item>
   </category>
-  <category name="Wraps">
+  <category> 
+    <title>Wraps</title>
     <item>
       <name>Turkey Club Warp</name>
       <description>Turkey, Cheese, Lettuce, Tomato, Onion, Mayo</description>
-      <price>495</price>
+      <price>4.95</price>
+    </item>
+  </category>
+  <category>  
+    <title>Grinders</title>
+    <item>
+      <name>Hamburger</name>
+      <price size="small">4.50</price>
+      <price size="large">4.95</price>
+    </item>
+    <item>
+      <name>Cheeseburger</name>
+      <price size="small">4.75</price>
+      <price size="large">5.75</price>
     </item>
   </category>
 </menu>
