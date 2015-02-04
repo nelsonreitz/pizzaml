@@ -1,5 +1,9 @@
 <?php
 
+    /**
+     * Main controller.
+     */    
+    
     require('../helpers/helpers.php');
     require('../models/model.php');
 

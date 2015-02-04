@@ -7,7 +7,7 @@
     $categories = $xml->category;
     
     /**
-     * Renders a list of items cointaned in a category.
+     * Renders a list of items contained in a category.
      */
     function render_items($category)
     {
@@ -17,10 +17,10 @@
         $items = $xml->xpath("/menu/category[title='$category']/item");
         
         // for each items
-        while (list( , $node) = each($items))
+        foreach ($items as $node)
         {
             echo '<ul>';
-            echo "<li>$node->name</li>";
+            echo   "<li>$node->name</li>";
             
             // render description if any
             if (isset($node->description))
@@ -41,6 +41,23 @@
                 }
             }
             echo '</ul>';
+            echo '<form action="order.php" method="post">';
+            echo   '<input type="number" name="quantity" value="1" min="1" max="100" />';
+            
+            if (isset($node->price[0]['size']))
+            {
+                echo '<select name="size">';
+                
+                foreach ($node->price as $price)
+                {
+                    echo '<option value="' . $price['size'] . '">' . $price['size'] . '</option>';
+                }
+                
+                echo '</select>';              
+            }
+            
+            echo   '<button type="submit">Order</button>';
+            echo '</form>';
         }
     }
 
