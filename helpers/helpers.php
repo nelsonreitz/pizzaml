@@ -18,10 +18,8 @@
         if (file_exists($path))
         {
             extract($data);
-            require('../views/templates/header.php');
             require($path);
-            require('../views/templates/footer.php');
         }
-    }   
+    }
      
 ?>

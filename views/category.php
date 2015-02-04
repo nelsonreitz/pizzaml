@@ -1,5 +1,8 @@
 <?php 
 
-    render_items($cat);
+    foreach ($items as $item)
+    {
+        render('item', ['item' => $item]);
+    }
 
 ?>    

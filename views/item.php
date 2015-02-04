@@ -5,6 +5,7 @@
     <?php if (isset($item->description)): ?>
         <li class="description"><?= $item->description ?></li>
     <?php endif ?>
+    
     <?php foreach ($item->price as $price): ?>
     
         <?php if (isset($price['size'])): ?>
@@ -14,7 +15,9 @@
         <?php endif ?>
         
     <?php endforeach ?>
+    
   </ul>
   
-  <?php require('/order_form.php') ?>
+  <?php render('order_form', ['item' => $item]) ?>
+  
 </div>

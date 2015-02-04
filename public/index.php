@@ -21,18 +21,21 @@
     switch ($page)
     {
         case 'index':
-            render('index', ['categories' => $categories]); 
+            render('header');
+            render('index', ['categories' => $categories]);
+            render('footer');
             break;
 
         case 'category':
             if (isset($_GET['cat']))
             {
-                render('category',
-                    [
-                        'cat' => $_GET['cat'],
-                        'title' => $_GET['cat']
-                    ]
-                );
+                $cat = $_GET['cat'];
+                
+                $items = query_items($cat);
+                
+                render('header', ['title' => $cat]);
+                render('category', ['items' => $items]);
+                render('footer');
             }
             break;
     }   
