@@ -31,24 +31,23 @@
         // update current orders quantity if same item
         if (!empty($_SESSION['orders']))
         {
-            // search for item occurence
-            $n = count($_SESSION['orders']);
-            for ($i = 0; $i < $n; $i++)
+            // search through orders
+            foreach ($_SESSION['orders'] as $id => $order)
             {
                 // handle different sizes
                 if (isset($_POST['size']))
                 {
-                    if ($_POST['item'] == $_SESSION['orders'][$i]['item'] && $_POST['size'] == $_SESSION['orders'][$i]['size'])
+                    if ($_POST['item'] == $order['item'] && $_POST['size'] == $order['size'])
                     {
-                        $_SESSION['orders'][$i]['quantity'] += $_POST['quantity'];
+                        $_SESSION['orders'][$id]['quantity'] += $_POST['quantity'];
                         $order_found = True;
                     }
                 }
                 else
                 {
-                    if ($_POST['item'] == $_SESSION['orders'][$i]['item'])
+                    if ($_POST['item'] == $order['item'])
                     {
-                        $_SESSION['orders'][$i]['quantity'] += $_POST['quantity'];
+                        $_SESSION['orders'][$id]['quantity'] += $_POST['quantity'];
                         $order_found = True;
                     }
                 }
@@ -61,10 +60,14 @@
             $_POST['price'] = $_POST[$_POST['size']];
         }
 
+        // generate a unique id for the order
+        $id = uniqid();
+        $_POST['id'] = $id;
+
         // store order in session
         if (!$order_found)
         {
-            $_SESSION['orders'][] = $_POST;
+            $_SESSION['orders'][$id] = $_POST;
         }
 
         // render page
@@ -74,5 +77,4 @@
     }
 
     var_dump($_SESSION['orders']);
-
 ?>
