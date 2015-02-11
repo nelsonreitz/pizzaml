@@ -22,7 +22,7 @@
       <price size="large">15.80</price>
     </item>
   </category>
-  <category>  
+  <category>
     <title>Special Dinners</title>
     <item>
       <name>Chicken Wings Dinner</name>
@@ -33,7 +33,7 @@
       <price>7.25</price>
     </item>
   </category>
-  <category>  
+  <category>
     <title>Side Orders</title>
     <item>
       <name>French Fries</name>
@@ -45,7 +45,7 @@
       <price>5.75</price>
     </item>
   </category>
-  <category>  
+  <category>
     <title>Salads</title>
     <item>
       <name>Garden</name>
@@ -58,7 +58,7 @@
       <price size="large">5.50</price>
     </item>
   </category>
-  <category>  
+  <category>
     <title>Spaghetti or Ziti</title>
     <item>
       <name>With Meat Ball</name>
@@ -80,14 +80,14 @@
       <price>7.25</price>
     </item>
   </category>
-  <category>  
+  <category>
     <title>Homemade Calzones</title>
     <item>
       <name>Vegetarian</name>
       <price size="large">7.35</price>
     </item>
   </category>
-  <category> 
+  <category>
     <title>Wraps</title>
     <item>
       <name>Turkey Club Warp</name>
@@ -95,7 +95,7 @@
       <price>4.95</price>
     </item>
   </category>
-  <category>  
+  <category>
     <title>Grinders</title>
     <item>
       <name>Hamburger</name>

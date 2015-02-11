@@ -5,3 +5,5 @@
 
   <?php endforeach ?>
 </ul>
+
+<a href="cart.php">Shopping Cart</a>
