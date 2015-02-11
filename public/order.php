@@ -62,7 +62,6 @@
 
         // generate a unique id for the order
         $id = uniqid();
-        $_POST['id'] = $id;
 
         // store order in session
         if (!$order_found)

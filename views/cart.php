@@ -13,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <?php foreach ($_SESSION['orders'] as $order): ?>
+      <?php foreach ($_SESSION['orders'] as $id => $order): ?>
 
           <tr>
             <td><?= $order['cat'] ?></td>
@@ -26,7 +26,7 @@
             <td><?= $order['quantity'] ?></td>
             <td><?= number_format($order['price'] * $order['quantity'], 2) ?></td>
             <td>
-              <input type="checkbox" name="id[]" value="<?= $order['id'] ?>" />
+              <input type="checkbox" name="id[]" value="<?= $id ?>" />
             </td>
           </tr>
 

@@ -8,13 +8,16 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         // if some remove checkboxes were checked
-        if(isset($_POST['id']))
+        if (isset($_POST['id']))
         {
             // search through orders
-            $n = count($_SESSION['orders']);
-            for ($i = 0; $i < n; $i++)
+            foreach ($_SESSION['orders'] as $id => $order)
             {
-
+                if (in_array($id, $_POST['id']))
+                {
+                    // remove order
+                    unset($_SESSION['orders'][$id]);
+                }
             }
         }
     }
