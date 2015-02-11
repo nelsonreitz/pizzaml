@@ -26,6 +26,35 @@
             echo 'error';
         }
 
+        $order_found = False;
+
+        // update current orders quantity if same item
+        if (!empty($_SESSION['orders']))
+        {
+            // search for item occurence
+            $n = count($_SESSION['orders']);
+            for ($i = 0; $i < $n; $i++)
+            {
+                // handle different sizes
+                if (isset($_POST['size']))
+                {
+                    if ($_POST['item'] == $_SESSION['orders'][$i]['item'] && $_POST['size'] == $_SESSION['orders'][$i]['size'])
+                    {
+                        $_SESSION['orders'][$i]['quantity'] += $_POST['quantity'];
+                        $order_found = True;
+                    }
+                }
+                else
+                {
+                    if ($_POST['item'] == $_SESSION['orders'][$i]['item'])
+                    {
+                        $_SESSION['orders'][$i]['quantity'] += $_POST['quantity'];
+                        $order_found = True;
+                    }
+                }
+            }
+        }
+
         // find correct price
         if (isset($_POST['small']) || isset($_POST['large']))
         {
@@ -33,7 +62,10 @@
         }
 
         // store order in session
-        $_SESSION['orders'][] = $_POST;
+        if (!$order_found)
+        {
+            $_SESSION['orders'][] = $_POST;
+        }
 
         // render page
         render('header', ['title' => 'Order']);
