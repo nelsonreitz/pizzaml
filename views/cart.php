@@ -23,10 +23,10 @@
                   echo (isset($order['size'])) ? $order['size'] : '';
               ?>
             </td>
-            <td><input type="number" name="<?= $id ?>" value="<?= $order['quantity'] ?>" min="0" max="<?= MAX_QUANT ?>" /></td>
+            <td><input type="number" name="<?= $id ?>_qty" value="<?= $order['quantity'] ?>" min="1" max="<?= MAX_QUANT ?>" /></td>
             <td><?= number_format($order['price'] * $order['quantity'], 2) ?></td>
             <td>
-              <input type="checkbox" name="id[]" value="<?= $id ?>" />
+              <input type="checkbox" name="remove[]" value="<?= $id ?>" />
             </td>
           </tr>
 
