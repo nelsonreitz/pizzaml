@@ -9,6 +9,9 @@
      * Helper functions.
      */
 
+    // Maximum quantity of items in an order
+    define('MAX_QUANT', 100);
+
     // enable sessions
     session_start();
 

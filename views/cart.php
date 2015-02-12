@@ -23,7 +23,7 @@
                   echo (isset($order['size'])) ? $order['size'] : '';
               ?>
             </td>
-            <td><?= $order['quantity'] ?></td>
+            <td><input type="number" name="<?= $id ?>" value="<?= $order['quantity'] ?>" min="0" max="<?= MAX_QUANT ?>" /></td>
             <td><?= number_format($order['price'] * $order['quantity'], 2) ?></td>
             <td>
               <input type="checkbox" name="id[]" value="<?= $id ?>" />
@@ -31,7 +31,6 @@
           </tr>
 
       <?php endforeach ?>
-
       <tr>
         <td>TOTAL</td>
         <td><?= number_format(total(), 2) ?></td>
@@ -39,5 +38,5 @@
     </tbody>
   </table>
 
-  <button type="submit">Update</button>
+  <button type="submit">Update cart</button>
 </form>

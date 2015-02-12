@@ -8,7 +8,7 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         // if some remove checkboxes were checked
-        if (isset($_POST['id']))
+        if (!empty($_POST['id']))
         {
             // search through orders
             foreach ($_SESSION['orders'] as $id => $order)
@@ -18,6 +18,19 @@
                     // remove order
                     unset($_SESSION['orders'][$id]);
                 }
+            }
+        }
+
+        // sanitize quantity input
+        
+
+        //
+        foreach ($_POST as $id => $quantity)
+        {
+            if (array_key_exists($id, $_SESSION['orders']))
+            {
+                // update quantity
+                $_SESSION['orders'][$id]['quantity'] = $quantity;
             }
         }
     }

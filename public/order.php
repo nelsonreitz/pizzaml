@@ -13,6 +13,11 @@
             // error message
             echo 'error';
         }
+        else if (!preg_match("/^\d+$/", $_POST['quantity']))
+        {
+            // error message
+            echo 'error';
+        }
         else
         {
             // cast quantity to int
@@ -20,7 +25,7 @@
         }
 
         // validate submission
-        if ($quantity < 1 || $quantity > 50)
+        if ($quantity < 1 || $quantity > MAX_QUANT)
         {
             // error message
             echo 'error';

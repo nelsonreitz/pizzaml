@@ -19,6 +19,6 @@
       <input type="hidden" name="price" value="<?= $item->price ?>" />
   <?php endif ?>
 
-  <input type="number" name="quantity" value="1" min="1" max="100" />
+  <input type="number" name="quantity" value="1" min="1" max="<?= MAX_QUANT ?>" />
   <button type="submit">Order</button>
 </form>
