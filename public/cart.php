@@ -21,11 +21,11 @@
             }
         }
 
-        // quantities
+        // quantities inputs
         foreach ($_POST as $key => $quantity)
         {
-            // except remove checkboxes
-            if ($key != 'remove')
+            // except remove checkboxes and checkout
+            if ($key != 'remove' && $key != 'checkout')
             {
                 // empty input
                 if (empty($_POST[$key]))
@@ -54,6 +54,30 @@
                 // update quantity
                 $_SESSION['orders'][$id]['quantity'] = $quantity;
             }
+        }
+
+        // checkout
+        if (isset($_POST['checkout']))
+        {
+            // remember total
+            $total = total();
+
+            // unset session variables
+            $_SESSION = [];
+
+            // clear cookie
+            if (!empty($_COOKIE[session_name()]))
+            {
+                setcookie(session_name(), '', time() - 42000);
+            }
+
+            session_destroy();
+
+            // render checkout page
+            render('header', ['title' => 'Checkout']);
+            render('checkout', ['total' => $total]);
+            render('footer');
+            exit;
         }
     }
 

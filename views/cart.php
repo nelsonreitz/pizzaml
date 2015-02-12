@@ -39,4 +39,5 @@
   </table>
 
   <button type="submit">Update cart</button>
+  <input type="submit" name="checkout" value="Checkout" />
 </form>
