@@ -13,19 +13,14 @@
             // error message
             echo 'error';
         }
+        // quantity must be a positive integer
         else if (!preg_match("/^\d+$/", $_POST['quantity']))
         {
             // error message
             echo 'error';
         }
-        else
-        {
-            // cast quantity to int
-            $quantity = (int) $_POST['quantity'];
-        }
-
-        // validate submission
-        if ($quantity < 1 || $quantity > MAX_QUANT)
+        // validate quantity range
+        else if ($_POST['quantity'] < 1 || $_POST['quantity'] > MAX_QUANT)
         {
             // error message
             echo 'error';

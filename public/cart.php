@@ -21,12 +21,30 @@
             }
         }
 
-        // sanitize quantity input
-        
-
         // quantities
         foreach ($_POST as $key => $quantity)
         {
+            // except remove checkboxes
+            if ($key != 'remove')
+            {
+                // empty input
+                if (empty($_POST[$key]))
+                {
+                    echo 'error';
+                }
+                // quantity must be a positive integer
+                else if (!preg_match("/^\d+$/", $quantity))
+                {
+                    echo 'error';
+                }
+                // validate quantity range
+                else if ($quantity < 1 || $quantity > MAX_QUANT)
+                {
+                    // error message
+                    echo 'error';
+                }
+            }
+
             // retrieve order id in input name
             $id = str_replace('_qty', '', $key);
 
@@ -51,6 +69,7 @@
     {
         render('cart');
     }
+
     render('footer');
 
 ?>
