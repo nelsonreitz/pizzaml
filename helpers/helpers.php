@@ -29,7 +29,18 @@
     }
 
     /**
-     * Find total order price.
+     * Renders an error message.
+     */
+    function error_message($message)
+    {
+        render('header', ['title' => 'Error']);
+        render('error_message', ['message' => $message]);
+        render('footer');
+        exit;
+    }
+
+    /**
+     * Finds total order price.
      **/
     function total()
     {
@@ -52,4 +63,5 @@
 
         return $total / 100;
     }
+
 ?>

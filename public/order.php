@@ -10,20 +10,17 @@
         // validate submission
         if (empty($_POST['quantity']))
         {
-            // error message
-            echo 'error';
+            error_message('Please specify a quantity');
         }
         // quantity must be a positive integer
-        else if (!preg_match("/^\d+$/", $_POST['quantity']))
+        else if (!preg_match('/^\d+$/', $_POST['quantity']))
         {
-            // error message
-            echo 'error';
+            error_message('Quantity must be a postivie integer');
         }
         // validate quantity range
         else if ($_POST['quantity'] < 1 || $_POST['quantity'] > MAX_QUANT)
         {
-            // error message
-            echo 'error';
+            error_message('Quantity must be between 1 and ' . MAX_QUANT);
         }
 
         $order_found = False;
@@ -75,5 +72,4 @@
         render('footer');
     }
 
-    var_dump($_SESSION['orders']);
 ?>

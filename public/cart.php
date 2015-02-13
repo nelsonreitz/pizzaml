@@ -27,21 +27,20 @@
             // except remove checkboxes and checkout
             if ($key != 'remove' && $key != 'checkout')
             {
-                // empty input
+                // validate submission
                 if (empty($_POST[$key]))
                 {
-                    echo 'error';
+                    error_message('Please specify a quantity');
                 }
                 // quantity must be a positive integer
-                else if (!preg_match("/^\d+$/", $quantity))
+                else if (!preg_match('/^\d+$/', $quantity))
                 {
-                    echo 'error';
+                    error_message('Quantity must be a positive integer');
                 }
                 // validate quantity range
                 else if ($quantity < 1 || $quantity > MAX_QUANT)
                 {
-                    // error message
-                    echo 'error';
+                    error_message('Quantity must be between 1 and ' . MAX_QUANT);
                 }
             }
 
@@ -79,6 +78,10 @@
             render('footer');
             exit;
         }
+
+        // redirect to self to avoid form resubmission
+        header('Location: ' . $_SERVER['REQUEST_URI']);
+        exit;
     }
 
     // render page
