@@ -1,3 +1,3 @@
-<p>This is the checkout view</p>
+<p>Thank you for your order!</p>
 <p>Total: $<?= number_format($total, 2) ?></p>
-<p>Link to Home</p>
+<p><a href="/">Home</a></p>

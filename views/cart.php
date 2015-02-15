@@ -1,5 +1,3 @@
-<p>This is the shopping cart view.</p>
-
 <form method="post" action="cart.php">
   <table>
     <thead>

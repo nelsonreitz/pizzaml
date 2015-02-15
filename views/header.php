@@ -10,6 +10,3 @@
     <?php endif ?>
   </head>
   <body>
-    <?php if (isset($title)): ?>
-        <h1><?= htmlspecialchars($title) ?></h1>
-    <?php endif ?>
