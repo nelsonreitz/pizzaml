@@ -10,6 +10,8 @@
     <?php endif ?>
   </head>
   <body>
-    <header>
+    <header class="header" role="banner">
+      <h1 class="site-title">Three Aces</h1>
+      <a href="cart.php">Shopping Cart</a>
     </header>
     <?php render_nav() ?>
