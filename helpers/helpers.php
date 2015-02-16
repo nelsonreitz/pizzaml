@@ -9,13 +9,13 @@
      * Helper functions.
      */
 
+    require('../models/model.php');
+
     // Maximum quantity of items in an order
     define('MAX_QUANT', 100);
 
     // enable sessions
     session_start();
-
-    require('../models/model.php');
 
     /**
      * Renders template.
@@ -64,7 +64,6 @@
         global $xml;
 
         $items = $xml->xpath("/menu/category[title='$category']/item");
-
         return $items;
     }
 
