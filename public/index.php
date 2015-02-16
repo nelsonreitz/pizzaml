@@ -23,7 +23,7 @@
     {
         case 'index':
             render('header');
-            render('index', ['categories' => $categories]);
+            render('index');
             render('footer');
             break;
 

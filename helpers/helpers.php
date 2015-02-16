@@ -15,6 +15,8 @@
     // enable sessions
     session_start();
 
+    require('../models/model.php');
+
     /**
      * Renders template.
      */
@@ -26,6 +28,44 @@
             extract($data);
             require($path);
         }
+    }
+
+    /**
+     * Renders the navigation menu.
+     */
+    function render_nav()
+    {
+        global $categories;
+
+        // remember current url
+        $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+        foreach ($categories as $category)
+        {
+            // relative paths
+            if (strpos($host, $_SERVER['SERVER_NAME'] . '/category/') !== False)
+            {
+                $category->url = $category->title;
+            }
+            else
+            {
+                $category->url = 'category/' . $category->title;
+            }
+        }
+
+        render('nav', ['categories' => $categories]);
+    }
+
+    /**
+     * Returns a list of items contained in category.
+     */
+    function query_items($category)
+    {
+        global $xml;
+
+        $items = $xml->xpath("/menu/category[title='$category']/item");
+
+        return $items;
     }
 
     /**
@@ -41,7 +81,7 @@
 
     /**
      * Finds total order price.
-     **/
+     */
     function total()
     {
         // return early if no orders
@@ -54,7 +94,7 @@
 
         foreach ($_SESSION['orders'] as $order)
         {
-            // convert quantity to int to avoid float imprecision
+            // convert price to int to avoid float imprecision
             $price = $order['price'] * 100;
 
             // add order total price to total

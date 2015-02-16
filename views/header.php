@@ -10,3 +10,6 @@
     <?php endif ?>
   </head>
   <body>
+    <header>
+    </header>
+    <?php render_nav() ?>
