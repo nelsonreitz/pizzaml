@@ -20,4 +20,4 @@
 
   <?php render('order_form', ['item' => $item]) ?>
 
-</div>
+</div><!-- .item -->
