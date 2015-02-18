@@ -1,4 +1,4 @@
-<nav class="navigation" role="navigation">
+<nav class="navigation three columns" role="navigation">
   <ul>
     <?php foreach ($categories as $category): ?>
 

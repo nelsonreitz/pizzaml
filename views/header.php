@@ -29,4 +29,6 @@
     </header>
 
     <div class="container">
-      <?php render_nav() ?>
+      <div class="row">
+        <?php render_nav() ?>
+        <div class="content nine columns">

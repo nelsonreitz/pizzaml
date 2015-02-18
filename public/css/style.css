@@ -24,6 +24,7 @@ a {
 /* header */
 
 .header {
+    background-color: white;
     height: 65px;
     width: 100%;
     position: fixed;
@@ -53,5 +54,28 @@ a {
     position: absolute;
     right: 0;
     font-size: 15px;
+}
+
+/* Navigation */
+
+.navigation {
+    position: fixed;
+    width: 12.67% !important; /* equals 22% of container */
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+}
+
+.navigation li {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Content */
+
+.content {
+    margin-left: 26%;
 }
 
