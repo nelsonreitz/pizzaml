@@ -1,9 +1,9 @@
-<form action="/order.php" method="post" >
+<form class="order-form" action="/order.php" method="post">
   <input type="hidden" name="cat" value="<?= $_GET['cat'] ?>" />
   <input type="hidden" name="item" value="<?= $item->name ?>" />
 
   <?php if (isset($item->price[0]['size'])): ?>
-      <select name="size">
+      <select class="order-size" name="size">
 
         <?php foreach ($item->price as $price): ?>
             <option value="<?= $price['size'] ?>"><?= $price['size'] ?></option>
@@ -19,6 +19,6 @@
       <input type="hidden" name="price" value="<?= $item->price ?>" />
   <?php endif ?>
 
-  <input type="number" name="quantity" value="1" min="1" max="<?= MAX_QUANT ?>" />
-  <button type="submit">Order</button>
+  <input class="order-quantity" type="number" name="quantity" value="1" min="1" max="<?= MAX_QUANT ?>" />
+  <input class="order-submit" type="submit" value="Order">
 </form>
