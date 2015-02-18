@@ -15,7 +15,7 @@
         // quantity must be a positive integer
         else if (!preg_match('/^\d+$/', $_POST['quantity']))
         {
-            error_message('Quantity must be a postivie integer');
+            error_message('Quantity must be a positive integer');
         }
         // validate quantity range
         else if ($_POST['quantity'] < 1 || $_POST['quantity'] > MAX_QUANT)

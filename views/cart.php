@@ -1,3 +1,5 @@
+<h2>Shopping Cart</h2>
+
 <form method="post" action="cart.php">
   <table>
     <thead>
