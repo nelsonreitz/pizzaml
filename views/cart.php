@@ -8,8 +8,8 @@
         <th>Item</th>
         <th>Size</th>
         <th>Quantity</th>
-        <th>Price</th>
-        <th>Remove</th>
+        <th class="cart-price">Price</th>
+        <th class="cart-remove">Remove</th>
       </tr>
     </thead>
     <tbody>
