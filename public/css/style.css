@@ -94,6 +94,10 @@ a.cartlink:hover {
     color: #ed4529;
 }
 
+.current-cat a {
+    color: #ed4529;
+}
+
 /* Content */
 
 .content {

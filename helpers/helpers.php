@@ -33,7 +33,7 @@
     /**
      * Renders the navigation menu.
      */
-    function render_nav()
+    function render_nav($title = '')
     {
         global $categories;
 
@@ -53,7 +53,7 @@
             }
         }
 
-        render('nav', ['categories' => $categories]);
+        render('nav', ['title' => $title, 'categories' => $categories]);
     }
 
     /**

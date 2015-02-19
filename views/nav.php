@@ -2,7 +2,7 @@
   <ul>
     <?php foreach ($categories as $category): ?>
 
-        <li class="menu-item"><a href="<?= $category->url ?>"><?= $category->title ?></a></li>
+        <li class="menu-item<?= ($title == $category->title) ? ' current-cat' : '' ?>"><a href="<?= $category->url ?>"><?= $category->title ?></a></li>
 
     <?php endforeach ?>
   </ul>
