@@ -106,6 +106,24 @@ a {
     margin: 0;
 }
 
+/* Featured Item */
+
+.featured-item .item {
+    border-top: 0;
+}
+
+.featured-item a {
+    font-weight: 300;
+}
+
+.featured-item .item-infos {
+    padding: 0;
+}
+
+.featured-item-photo {
+    width: 100%;
+}
+
 /* Item */
 
 .item {
@@ -175,7 +193,8 @@ ul.item-prices {
     bottom: 0;
 }
 
-.order-form input {
+.order-form input,
+.order-form button {
     margin-left: 2px;
 }
 
