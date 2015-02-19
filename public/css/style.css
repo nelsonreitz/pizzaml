@@ -109,7 +109,7 @@ a {
 /* Featured Item */
 
 .featured-item .item {
-    border-top: 0;
+    border: 0;
 }
 
 .featured-item a {
