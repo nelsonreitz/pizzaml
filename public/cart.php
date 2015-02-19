@@ -24,8 +24,8 @@
         // quantities inputs
         foreach ($_POST as $key => $quantity)
         {
-            // except remove checkboxes and checkout
-            if ($key != 'remove' && $key != 'checkout')
+            // except remove checkboxes and submits
+            if ($key != 'remove' && $key != 'checkout' && $key != 'update')
             {
                 // validate submission
                 if (empty($_POST[$key]))
