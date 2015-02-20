@@ -12,7 +12,7 @@ html, body {
 
 body {
     font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding-top: 130px;
+    padding-top: 120px;
     overflow-y: scroll;
 }
 
@@ -38,12 +38,12 @@ th, td {
 
 .header {
     background-color: white;
-    height: 65px;
+    height: 70px;
     width: 100%;
     position: fixed;
     z-index: 999;
     top: 0;
-    margin-bottom: 65px;
+    margin-bottom: 50px;
 }
 
 .header .container {
@@ -57,20 +57,17 @@ th, td {
     display: block;
     height: 100%;
     font-size: 21px;
-    line-height: 25px;
+    line-height: 30px;
     font-weight: 400;
     text-transform: uppercase;
     padding: 20px 0;
+    letter-spacing: 0;
 }
 
 .cartlink {
     position: absolute;
     right: 0;
-    font-size: 15px;
-}
-
-a.cartlink:hover {
-    color: #ed4529;
+    font-size: 16px;
 }
 
 /* Navigation */
@@ -78,6 +75,7 @@ a.cartlink:hover {
 .navigation {
     position: fixed;
     width: 12.67% !important; /* equals 22% of container */
+    margin-top: 10px;
 }
 
 .navigation ul {
@@ -87,7 +85,7 @@ a.cartlink:hover {
 
 .navigation li {
     font-size: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .navigation a:hover {
@@ -147,6 +145,7 @@ a.cartlink:hover {
 
 .featured-item-photo {
     width: 100%;
+    margin-bottom: 10px;
 }
 
 /* Item */
@@ -154,7 +153,7 @@ a.cartlink:hover {
 .item {
     border-top: 1px solid #e8e8e8;
     border-bottom: 1px solid #e8e8e8;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     height: 160px;
     position: relative;
     padding: 12px 12px 12px 0;
@@ -193,7 +192,7 @@ a.cartlink:hover {
     margin: 0;
     position: absolute;
     bottom: 0;
-    width: 100px;
+    width: 105px;
     text-transform: capitalize;
 }
 
@@ -204,7 +203,8 @@ ul.item-prices {
 .item-prices li {
     margin: 0;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 16px;
+    margin-top: 4px;
 }
 
 .sizeprice {
@@ -253,9 +253,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* Cart */
 
+.cart {
+    padding-top: 30px;
+}
+
 .cart table {
     width: 100%;
-    margin-bottom: 65px;
+    margin-bottom: 30px;
 }
 
 .cart-size {
