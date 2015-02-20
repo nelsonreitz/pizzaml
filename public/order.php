@@ -23,9 +23,9 @@
             error_message('Quantity must be between 1 and ' . MAX_QUANT);
         }
 
-        $order_found = False;
+        $existing_order = False;
 
-        // update current orders quantity if same item
+        // update current order quantity if existing order
         if (!empty($_SESSION['orders']))
         {
             // search through orders
@@ -36,16 +36,48 @@
                 {
                     if ($_POST['item'] == $order['item'] && $_POST['size'] == $order['size'])
                     {
-                        $_SESSION['orders'][$id]['quantity'] += $_POST['quantity'];
-                        $order_found = True;
+                        $existing_order = True;
+
+                        // if limit is already reached
+                        if ($_SESSION['orders'][$id]['quantity'] >= MAX_QUANT)
+                        {
+                            error_message("You can't order more than " . MAX_QUANT . "&nbsp; items");
+                        }
+                        else
+                        {
+                            // increment quantity
+                            $_SESSION['orders'][$id]['quantity'] += $_POST['quantity'];
+                        }
+
+                        // limit quantity
+                        if ($_SESSION['orders'][$id]['quantity'] > MAX_QUANT)
+                        {
+                            $_SESSION['orders'][$id]['quantity'] = MAX_QUANT;
+                        }
                     }
                 }
                 else
                 {
                     if ($_POST['item'] == $order['item'])
                     {
-                        $_SESSION['orders'][$id]['quantity'] += $_POST['quantity'];
-                        $order_found = True;
+                        $existing_order = True;
+
+                        // if limit is already reached
+                        if ($_SESSION['orders'][$id]['quantity'] >= MAX_QUANT)
+                        {
+                            error_message("You can't order more than " . MAX_QUANT . "&nbsp; items");
+                        }
+                        else
+                        {
+                            // increment quantity
+                            $_SESSION['orders'][$id]['quantity'] += $_POST['quantity'];
+                        }
+
+                        // limit quantity
+                        if ($_SESSION['orders'][$id]['quantity'] > MAX_QUANT)
+                        {
+                            $_SESSION['orders'][$id]['quantity'] = MAX_QUANT;
+                        }
                     }
                 }
             }
@@ -61,7 +93,7 @@
         $id = uniqid();
 
         // store order in session
-        if (!$order_found)
+        if (!$existing_order)
         {
             $_SESSION['orders'][$id] = $_POST;
         }
