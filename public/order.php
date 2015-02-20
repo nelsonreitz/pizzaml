@@ -10,17 +10,17 @@
         // validate submission
         if (empty($_POST['quantity']))
         {
-            error_message('Please specify a quantity');
+            error_message('please specify a quantity');
         }
         // quantity must be a positive integer
         else if (!preg_match('/^\d+$/', $_POST['quantity']))
         {
-            error_message('Quantity must be a positive integer');
+            error_message('quantity must be a positive integer');
         }
         // validate quantity range
         else if ($_POST['quantity'] < 1 || $_POST['quantity'] > MAX_QUANT)
         {
-            error_message('Quantity must be between 1 and ' . MAX_QUANT);
+            error_message('quantity must be between 1 and ' . MAX_QUANT);
         }
 
         $existing_order = False;
@@ -41,7 +41,7 @@
                         // if limit is already reached
                         if ($_SESSION['orders'][$id]['quantity'] >= MAX_QUANT)
                         {
-                            error_message("You can't order more than " . MAX_QUANT . "&nbsp; items");
+                            error_message("you can't order more than " . MAX_QUANT . "&nbsp; items");
                         }
                         else
                         {
@@ -65,7 +65,7 @@
                         // if limit is already reached
                         if ($_SESSION['orders'][$id]['quantity'] >= MAX_QUANT)
                         {
-                            error_message("You can't order more than " . MAX_QUANT . "&nbsp; items");
+                            error_message("you can't order more than " . MAX_QUANT . "&nbsp; items");
                         }
                         else
                         {

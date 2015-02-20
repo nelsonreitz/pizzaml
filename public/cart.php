@@ -30,17 +30,17 @@
                 // validate submission
                 if (empty($_POST[$key]))
                 {
-                    error_message('Please specify a quantity');
+                    error_message('please specify a quantity');
                 }
                 // quantity must be a positive integer
                 else if (!preg_match('/^\d+$/', $quantity))
                 {
-                    error_message('Quantity must be a positive integer');
+                    error_message('quantity must be a positive integer');
                 }
                 // validate quantity range
                 else if ($quantity < 1 || $quantity > MAX_QUANT)
                 {
-                    error_message('Quantity must be between 1 and ' . MAX_QUANT);
+                    error_message('quantity must be between 1 and ' . MAX_QUANT);
                 }
             }
 
