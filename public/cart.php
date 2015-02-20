@@ -58,6 +58,11 @@
         // checkout
         if (isset($_POST['checkout']))
         {
+            if (empty($_SESSION['orders']))
+            {
+                error_message('please add some items to the cart before checking out');
+            }
+
             // remember total
             $total = total();
 
