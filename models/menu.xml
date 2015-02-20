@@ -3,6 +3,16 @@
   <category>
     <title>Pizzas</title>
     <item>
+      <name>Tomato &amp; Cheese</name>
+      <price size="small">5.50</price>
+      <price size="large">9.75</price>
+    </item>
+    <item>
+      <name>Meatball</name>
+      <price size="small">6.85</price>
+      <price size="large">10.85</price>
+    </item>
+    <item>
       <name>Ham</name>
       <price size="small">6.85</price>
       <price size="large">10.85</price>
@@ -21,6 +31,18 @@
       <price size="small">9.80</price>
       <price size="large">15.80</price>
     </item>
+    <item>
+      <name>Vegetarian</name>
+      <description>Sliced Tomatoes, Onion, Peppers, Mushrooms, Broccoli, Mozzarella</description>
+      <price size="small">9.80</price>
+      <price size="large">15.80</price>
+    </item>
+    <item>
+      <name>Meat Lovers</name>
+      <description>Pepperoni, Hamburg, Sausage &amp; Bacon</description>
+      <price size="small">9.80</price>
+      <price size="large">15.80</price>
+    </item>
   </category>
   <category>
     <title>Special Dinners</title>
@@ -32,17 +54,30 @@
       <name>Gyro Plate</name>
       <price>7.25</price>
     </item>
+    <item>
+      <name>Double-cheeseburger Plate</name>
+      <price>5.75</price>
+    </item>
   </category>
   <category>
     <title>Side Orders</title>
+    <item>
+      <name>Onion Rings</name>
+      <price size="small">2.60</price>
+      <price size="large">2.95</price>
+    </item>
     <item>
       <name>French Fries</name>
       <price size="small">2.25</price>
       <price size="large">2.65</price>
     </item>
     <item>
-      <name>Buffalo Wings</name>
-      <price>5.75</price>
+      <name>Mozzarella Sticks</name>
+      <price>4.50</price>
+    </item>
+    <item>
+      <name>Homemade Spinach Pie</name>
+      <price>3.10</price>
     </item>
   </category>
   <category>
@@ -57,9 +92,18 @@
       <price size="small">4.50</price>
       <price size="large">5.50</price>
     </item>
+    <item>
+      <name>Grilled Chicken</name>
+      <price size="small">4.95</price>
+      <price size="large">5.95</price>
+    </item>
   </category>
   <category>
     <title>Spaghetti or Ziti</title>
+    <item>
+      <name>With Sauce</name>
+      <price>5.40</price>
+    </item>
     <item>
       <name>With Meat Ball</name>
       <price>6.45</price>
@@ -79,11 +123,27 @@
       <name>With Sausage</name>
       <price>7.25</price>
     </item>
+    <item>
+      <name>With Mushrooms</name>
+      <price>7.25</price>
+    </item>
+    <item>
+      <name>Veggie Lasagna</name>
+      <price>7.25</price>
+    </item>
   </category>
   <category>
     <title>Homemade Calzones</title>
     <item>
       <name>Vegetarian</name>
+      <price size="large">7.35</price>
+    </item>
+    <item>
+      <name>Ham &amp; Cheese</name>
+      <price size="large">7.35</price>
+    </item>
+    <item>
+      <name>Chicken Cutlet</name>
       <price size="large">7.35</price>
     </item>
   </category>
@@ -92,6 +152,16 @@
     <item>
       <name>Turkey Club Warp</name>
       <description>Turkey, Cheese, Lettuce, Tomato, Onion, Mayo</description>
+      <price>4.95</price>
+    </item>
+    <item>
+      <name>Chicken Cobb</name>
+      <description>Grilled Chicken, Bacon, Cheese, Lettuce, Tomato, Onion, Honey Mustard</description>
+      <price>4.95</price>
+    </item>
+    <item>
+      <name>Crispy Chicken</name>
+      <description>Chicken Finger, Lettuce, Tomato, Onion, Honey Mustard</description>
       <price>4.95</price>
     </item>
   </category>
@@ -106,6 +176,21 @@
       <name>Cheeseburger</name>
       <price size="small">4.75</price>
       <price size="large">5.75</price>
+    </item>
+    <item>
+      <name>Roast Beef</name>
+      <price size="small">4.95</price>
+      <price size="large">5.95</price>
+    </item>
+    <item>
+      <name>Cheese Steak</name>
+      <price size="small">5.10</price>
+      <price size="large">6.00</price>
+    </item>
+    <item>
+      <name>Special Steak</name>
+      <price size="small">5.40</price>
+      <price size="large">6.40</price>
     </item>
   </category>
 </menu>
