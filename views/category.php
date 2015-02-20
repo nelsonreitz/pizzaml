@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     foreach ($items as $item)
     {

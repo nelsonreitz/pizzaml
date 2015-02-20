@@ -6,12 +6,16 @@
      * Computer Science E-75
      * Project0
      *
+     * Nelson Reitz
+     * http://github.com/nelsonreitz/project0/
+     *
      * Helper functions.
      */
 
+    // configuration
     require('../models/model.php');
 
-    // Maximum quantity of items in an order
+    // maximum quantity of items in an order
     define('MAX_QUANT', 100);
 
     // enable sessions

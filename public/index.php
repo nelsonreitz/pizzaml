@@ -1,6 +1,14 @@
 <?php
 
     /**
+     * index.php
+     *
+     * Computer Science E-75
+     * Project0
+     *
+     * Nelson Reitz
+     * http://github.com/nelsonreitz/project0/
+     *
      * Main controller.
      */
 

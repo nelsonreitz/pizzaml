@@ -30,5 +30,7 @@
 
     <div class="container">
       <div class="row">
+
         <?php (isset($title)) ? render_nav($title) : render_nav() ?>
+
         <div class="content nine columns">

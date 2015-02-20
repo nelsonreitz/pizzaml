@@ -9,6 +9,7 @@
     <?php endif ?>
 
     <ul class="item-prices">
+
       <?php foreach ($item->price as $price): ?>
 
           <?php if (isset($price['size'])): ?>
@@ -18,6 +19,7 @@
           <?php endif ?>
 
       <?php endforeach ?>
+
     </ul>
 
     <?php render('order_form', ['item' => $item]) ?>

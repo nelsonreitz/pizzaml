@@ -1,4 +1,5 @@
 <form class="order-form" action="/order.php" method="post">
+
   <input type="hidden" name="cat" value="<?= $_GET['cat'] ?>" />
   <input type="hidden" name="item" value="<?= $item->name ?>" />
 
@@ -21,4 +22,5 @@
 
   <input class="order-quantity" type="number" name="quantity" value="1" min="1" max="<?= MAX_QUANT ?>" />
   <input class="order-submit" type="submit" value="Order">
+
 </form>

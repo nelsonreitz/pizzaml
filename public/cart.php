@@ -1,5 +1,17 @@
 <?php
 
+    /**
+     * cart.php
+     *
+     * Computer Science E-75
+     * Project0
+     *
+     * Nelson Reitz
+     * http://github.com/nelsonreitz/project0/
+     *
+     * Shopping cart controller.
+     */
+
     // configuration
     require('../helpers/helpers.php');
     require('../models/model.php');
@@ -58,6 +70,7 @@
         // checkout
         if (isset($_POST['checkout']))
         {
+            // error if cart is empty
             if (empty($_SESSION['orders']))
             {
                 error_message('please add some items to the cart before checking out');

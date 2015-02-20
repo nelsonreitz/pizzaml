@@ -1,5 +1,17 @@
 <?php
 
+    /**
+     * order.php
+     *
+     * Computer Science E-75
+     * Project0
+     *
+     * Nelson Reitz
+     * http://github.com/nelsonreitz/project0/
+     *
+     * Order controller.
+     */
+
     // configuration
     require('../helpers/helpers.php');
     require('../models/model.php');
