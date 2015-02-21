@@ -1,6 +1,6 @@
 ## Project0: PizzaML
 
-This project is a fictive website built as an exercice for the [Computer Science E-75](cs75.tv) online course. The purpose of this
+This project is a fictive website built as an exercice for the [Computer Science E-75](http://cs75.tv) online course. The purpose of this
 exercise is to give an introduction to the MVC pattern and PHP.
 
 As per the project [specification](http://cdn.cs75.net/2012/summer/projects/0/project0.pdf), the goal was to build a dynamic
@@ -13,6 +13,7 @@ The website's functionality could be significantly improved by using Javascript 
 #### To do
 - Prettier URLs with `mod_rewrite`
 - `public/order.php` refactoring
+- Mobile media queries
 
 #### Credits
 This project was created using the CSS boilerplate [Skeleton](http://getskeleton.com) by [Dave Gamache](https://twitter.com/dhg) and
