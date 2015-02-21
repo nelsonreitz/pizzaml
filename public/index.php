@@ -39,6 +39,7 @@
             if (isset($_GET['cat']))
             {
                 $cat   = $_GET['cat'];
+                $cat   = str_replace('-', ' ', $cat);
                 $items = query_items($cat);
 
                 render('header', ['title' => $cat]);

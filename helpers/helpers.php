@@ -49,11 +49,12 @@
             // relative paths
             if (strpos($host, $_SERVER['SERVER_NAME'] . '/category/') !== False)
             {
-                $category->url = $category->title;
+                // replace space by dash for friendly url
+                $category->url = str_replace(' ', '-', $category->title);
             }
             else
             {
-                $category->url = 'category/' . $category->title;
+                $category->url = 'category/' . str_replace(' ', '-', $category->title);
             }
         }
 
