@@ -50,7 +50,7 @@ a:hover {
 
 input[type="number"]:focus,
 select:focus {
-    border: 1px solid #ed4520;
+    border: 1px solid #ed4529;
 }
 
 th, td {
