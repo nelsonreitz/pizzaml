@@ -23,6 +23,7 @@
 
 html {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 *, *:before, *:after {
