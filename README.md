@@ -15,7 +15,6 @@ The website's functionality could be significantly improved by using Javascript 
 #### To do
 - Prettier URLs with `mod_rewrite`
 - `public/order.php` refactoring
-- Mobile media queries
 
 #### Credits
 This project was created using the CSS boilerplate [Skeleton](http://getskeleton.com) by [Dave Gamache](https://twitter.com/dhg) and
