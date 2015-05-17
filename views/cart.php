@@ -31,7 +31,7 @@
 
       <tr class="cart-total">
         <td colspan="4">TOTAL</td>
-        <td class="cart-price"><?= number_format(total(), 2) ?></td>
+        <td class="cart-price">$<?= number_format(total(), 2) ?></td>
         <td></td>
       </tr>
     </tbody>
