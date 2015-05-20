@@ -48,6 +48,7 @@ a {
 
 a:hover {
     color: black;
+    text-decoration: underline;
 }
 
 input[type="number"]:focus,
@@ -89,6 +90,10 @@ th, td {
     text-transform: uppercase;
 }
 
+.site-title a:hover, a:hover.cartlink {
+    text-decoration: none;
+}
+
 .cartlink {
     font-size: 16px;
     position: absolute;
@@ -115,6 +120,7 @@ th, td {
 
 .navigation a:hover {
     color: #ed4529;
+    text-decoration: none;
 }
 
 .current-cat a {
