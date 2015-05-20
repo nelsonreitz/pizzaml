@@ -53,7 +53,7 @@
                         // if limit is already reached
                         if ($_SESSION['orders'][$id]['quantity'] >= MAX_QUANT)
                         {
-                            error_message("you can't order more than " . MAX_QUANT . "&nbsp; items");
+                            error_message("you can't order more than " . MAX_QUANT . " of that item");
                         }
                         else
                         {
