@@ -176,6 +176,10 @@ th, td {
     font-weight: 300;
 }
 
+.featured-item a:hover {
+    text-decoration: none;
+}
+
 .featured-item .item-infos {
     padding: 0;
 }
