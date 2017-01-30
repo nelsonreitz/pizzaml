@@ -278,16 +278,6 @@ ul.item-prices {
     width: 65px;
 }
 
-/* Styles input number spinners. Adapted from http://jsfiddle.net/Volker_E/WwfW9/ */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    background: #FFF url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAKUlEQVQYlWNgwAT/sYhhKPiPT+F/LJgEsHv37v+EMGkmkuImoh2NoQAANlcun/q4OoYAAAAASUVORK5CYII=) no-repeat center center;
-    border-left: 1px solid #a3a3a3;
-    opacity: .5;
-    width: 1em;
-}
-
 /* Message */
 .message {
     font-size: 18px;
