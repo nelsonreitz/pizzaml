@@ -8,21 +8,45 @@
         <p class="item-description"><?= $item->description ?></p>
     <?php endif ?>
 
-    <ul class="item-prices">
+    <form class="order-form" action="/order.php" method="post">
 
-      <?php foreach ($item->price as $price): ?>
+      <input type="hidden" name="cat" value="<?= $_GET['cat'] ?>" />
+      <input type="hidden" name="item" value="<?= $item->name ?>" />
 
-          <?php if (isset($price['size'])): ?>
-              <li class="item-price"><?= $price['size'] ?> : <span class="sizeprice">$<?= $price ?></span></li>
-          <?php else: ?>
-              <li class="item-price">$<?= $price ?></li>
-          <?php endif ?>
+      <ul class="item-prices">
 
-      <?php endforeach ?>
+        <?php if (isset($item->price[0]['size'])): ?>
 
-    </ul>
+          <?php foreach ($item->price as $price): ?>
 
-    <?php render('order_form', ['item' => $item]) ?>
+            <li class="item-price">
+              <?php if ($price['size'] == "large"): ?>
+                <input id="<?= $item->name . $price['size'] . 'radio' ?>" type="radio" name="size" value="<?= $price['size'] ?>" checked>
+              <?php else: ?>
+                <input id="<?= $item->name . $price['size'] . 'radio' ?>" type="radio" name="size" value="<?= $price['size'] ?>">
+              <?php endif ?>
+
+              <label for="<?= $item->name . $price['size'] . 'radio' ?>"><?= $price['size'] ?> : <span class="sizeprice">$<?= $price ?></span></label>
+            </li>
+
+            <input type="hidden" name="<?= $price['size'] ?>" value="<?= $price ?>" />
+
+          <?php endforeach ?>
+
+        <?php else: ?>
+
+            <li class="item-price">$<?= $item->price ?></li>
+
+            <input type="hidden" name="price" value="<?= $item->price ?>" />
+
+        <?php endif ?>
+
+      </ul>
+
+      <input class="order-quantity" type="number" name="quantity" value="1" min="1" max="<?= MAX_QUANT ?>" />
+      <input class="order-submit" type="submit" value="Order">
+
+    </form>
 
   </div><!-- .item-infos -->
 </div><!-- .item -->
