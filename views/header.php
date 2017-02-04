@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php if (isset($title)): ?>
-        <title>Three Aces | <?= htmlspecialchars($title) ?></title>
+        <title>PizzaML | <?= htmlspecialchars($title) ?></title>
     <?php else: ?>
-        <title>Three Aces</title>
+        <title>PizzaML</title>
     <?php endif ?>
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
@@ -25,7 +25,7 @@
 
     <header class="header" role="banner">
       <div class="container">
-        <h1 class="site-title"><a href="/">Three Aces</a></h1>
+        <h1 class="site-title"><a href="/">PizzaML</a></h1>
         <a class="cartlink" href="/cart.php">Shopping Cart</a>
       </div><!-- .container -->
     </header>
