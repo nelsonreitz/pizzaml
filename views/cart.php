@@ -5,7 +5,6 @@
 
     <thead>
       <tr>
-        <th>Category</th>
         <th>Item</th>
         <th>Size</th>
         <th>Quantity</th>
@@ -19,7 +18,6 @@
       <?php foreach ($_SESSION['orders'] as $id => $order): ?>
 
           <tr>
-            <td><?= $order['cat'] ?></td>
             <td><?= $order['item'] ?></td>
             <td class="cart-size"><?= (isset($order['size'])) ? $order['size'] : '' ?></td>
             <td><input type="number" name="<?= $id ?>_qty" value="<?= $order['quantity'] ?>" min="1" max="<?= MAX_QUANT ?>"></td>
@@ -30,7 +28,7 @@
       <?php endforeach ?>
 
       <tr class="cart-total">
-        <td colspan="4">TOTAL</td>
+        <td colspan="3">TOTAL</td>
         <td class="cart-price">$<?= number_format(total(), 2) ?></td>
         <td></td>
       </tr>
