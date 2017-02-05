@@ -26,7 +26,7 @@
                 <input id="<?= $item->name . $price['size'] . 'radio' ?>" type="radio" name="size" value="<?= $price['size'] ?>">
               <?php endif ?>
 
-              <label for="<?= $item->name . $price['size'] . 'radio' ?>"><?= $price['size'] ?> : <span class="sizeprice">$<?= $price ?></span></label>
+              <label for="<?= $item->name . $price['size'] . 'radio' ?>"><?= $price['size'] ?>: <span class="sizeprice">$<?= $price ?></span></label>
             </li>
 
             <input type="hidden" name="<?= $price['size'] ?>" value="<?= $price ?>" />
@@ -43,8 +43,10 @@
 
       </ul>
 
-      <input class="order-quantity" type="number" name="quantity" value="1" min="1" max="<?= MAX_QUANT ?>" />
-      <input class="order-submit" type="submit" value="Order">
+      <div class="order-submit">
+        <input class="order-quantity" type="number" name="quantity" value="1" min="1" max="<?= MAX_QUANT ?>" />
+        <input class="primary button" type="submit" value="Order">
+      </div><!-- .order-submit -->
 
     </form>
 

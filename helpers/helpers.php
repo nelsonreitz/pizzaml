@@ -16,7 +16,7 @@
     require('../models/model.php');
 
     // maximum quantity of items in an order
-    define('MAX_QUANT', 100);
+    define('MAX_QUANT', 99);
 
     // enable sessions
     session_start();
