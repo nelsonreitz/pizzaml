@@ -55,9 +55,9 @@ img {
     vertical-align: top;
 }
 
-input[type="number"]:focus,
-select:focus {
-    border: 1px solid #ed4529;
+input[type="number"]:focus {
+    border: 1px solid #f5441f;
+    box-shadow: 0 0 0 2px rgba(245, 68, 30, 0.5);
 }
 
 input.button {
@@ -77,11 +77,27 @@ input.button.primary {
     color: #ffffff;
 }
 
+input.button.primary:hover {
+    background-color: #ca2511;
+}
+
+input.button.primary:focus {
+    box-shadow: 0 0 0 2px rgba(245, 68, 30, 0.5);
+}
+
 input.button.secondary {
     background-color: #ffffff;
     border: 1px solid #a5a5a5;
     padding: 7px 16px;
     color: #222222;
+}
+
+input.button.secondary:hover {
+    background-color: #e8e8e8;
+}
+
+input.button.secondary:focus {
+    box-shadow: 0 0 0 2px rgba(165, 165, 165, 0.5);
 }
 
 input[type="number"] {
@@ -167,11 +183,11 @@ th, td {
 }
 
 .navigation a:hover {
-    color: #ed4529;
+    color: #f5441f;
 }
 
 .current-cat a {
-    color: #ed4529;
+    color: #f5441f;
 }
 
 /* Content */
