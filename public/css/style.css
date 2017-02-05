@@ -51,6 +51,10 @@ a:hover {
     color: #222222;
 }
 
+img {
+    vertical-align: top;
+}
+
 input[type="number"]:focus,
 select:focus {
     border: 1px solid #ed4529;
@@ -185,24 +189,12 @@ th, td {
 }
 
 /* Featured Item */
-.featured-item .item {
-    border: 0;
-}
-
-.featured-item a {
-    font-weight: 300;
-}
-
-.featured-item a:hover {
-    text-decoration: none;
-}
-
 .featured-item .item-infos {
     padding: 0;
 }
 
 .featured-item-photo {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     width: 100%;
 }
 
