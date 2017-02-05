@@ -6,8 +6,8 @@
     <thead>
       <tr>
         <th>Item</th>
-        <th>Size</th>
-        <th>Quantity</th>
+        <th class="item-size">Size</th>
+        <th class="cart-quantity">Quantity</th>
         <th class="cart-price">Price</th>
         <th class="cart-remove">Remove</th>
       </tr>
@@ -18,7 +18,10 @@
       <?php foreach ($_SESSION['orders'] as $id => $order): ?>
 
           <tr>
-            <td><?= $order['item'] ?></td>
+            <td>
+              <img class="item-photo" src="/img/pizza_icon.png" alt="<?= $order['item'] ?> photo">
+              <p class="item-name"><?= $order['item'] ?></p>
+            </td>
             <td class="cart-size"><?= (isset($order['size'])) ? $order['size'] : '' ?></td>
             <td><input type="number" name="<?= $id ?>_qty" value="<?= $order['quantity'] ?>" min="1" max="<?= MAX_QUANT ?>"></td>
             <td class="cart-price"><?= number_format($order['price'] * $order['quantity'], 2) ?></td>
@@ -37,8 +40,8 @@
   </table>
 
   <div class="cart-submits">
-    <input type="submit" name="update" value="Update Cart">
-    <input type="submit" name="checkout" value="Check Out">
+    <input class="button secondary" type="submit" name="update" value="Update Cart">
+    <input class="button primary" type="submit" name="checkout" value="Check Out">
   </div>
 
 </form>
