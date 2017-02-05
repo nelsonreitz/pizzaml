@@ -113,7 +113,6 @@ th, td {
 
 /* Navigation */
 .navigation {
-    margin-top: 10px;
     position: fixed;
     width: 12.67% !important; /* equals 22% of container */
 }
@@ -125,12 +124,12 @@ th, td {
 
 .navigation li {
     font-size: 16px;
-    margin-bottom: 10px;
+    line-height: 16px;
+    margin-bottom: 16px;
 }
 
 .navigation a:hover {
     color: #ed4529;
-    text-decoration: none;
 }
 
 .current-cat a {
