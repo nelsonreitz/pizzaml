@@ -20,13 +20,16 @@
 
     <link rel="icon" type="image/png" href="../img/favicon.png">
 
+    <script src="https://use.fontawesome.com/8a8e52f734.js"></script>
+
   </head>
   <body>
 
     <header class="header" role="banner">
       <div class="container">
-        <h1 class="site-title"><a href="/">PizzaML</a></h1>
-        <a class="cartlink" href="/cart.php">Shopping Cart</a>
+        <h1 class="site-title"><a href="/">Pizza<span class="ml">ML</span></a></h1>
+        <a class="cartlink" href="/cart.php">Shopping Cart<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+</a>
       </div><!-- .container -->
     </header>
 
