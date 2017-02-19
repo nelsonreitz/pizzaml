@@ -10,8 +10,8 @@
 
     <form class="order-form" action="/order.php" method="post">
 
-      <input type="hidden" name="cat" value="<?= $_GET['cat'] ?>" />
-      <input type="hidden" name="item" value="<?= $item->name ?>" />
+      <input name="cat" type="hidden" value="<?= $_GET['cat'] ?>" />
+      <input name="item" type="hidden" value="<?= $item->name ?>" />
 
       <ul class="item-prices">
 
@@ -21,15 +21,15 @@
 
             <li class="item-price">
               <?php if ($price['size'] == "large"): ?>
-                <input id="<?= $item->name . $price['size'] . 'radio' ?>" type="radio" name="size" value="<?= $price['size'] ?>" checked>
+                <input id="<?= $item->name . $price['size'] . 'radio' ?>" name="size" type="radio" value="<?= $price['size'] ?>" checked>
               <?php else: ?>
-                <input id="<?= $item->name . $price['size'] . 'radio' ?>" type="radio" name="size" value="<?= $price['size'] ?>">
+                <input id="<?= $item->name . $price['size'] . 'radio' ?>" name="size" type="radio" value="<?= $price['size'] ?>">
               <?php endif ?>
 
               <label for="<?= $item->name . $price['size'] . 'radio' ?>"><?= $price['size'] ?>: <span class="sizeprice">$<?= $price ?></span></label>
             </li>
 
-            <input type="hidden" name="<?= $price['size'] ?>" value="<?= $price ?>" />
+            <input name="<?= $price['size'] ?>" type="hidden" value="<?= $price ?>" />
 
           <?php endforeach ?>
 
@@ -37,14 +37,14 @@
 
             <li class="item-price">$<?= $item->price ?></li>
 
-            <input type="hidden" name="price" value="<?= $item->price ?>" />
+            <input name="price" type="hidden" value="<?= $item->price ?>" />
 
         <?php endif ?>
 
       </ul>
 
       <div class="order-submit">
-        <input class="order-quantity" type="number" name="quantity" value="1" min="1" max="<?= MAX_QUANT ?>" />
+        <input class="order-quantity" name="quantity" type="number" value="1" min="1" max="<?= MAX_QUANT ?>">
         <input class="primary button" type="submit" value="Order">
       </div><!-- .order-submit -->
 

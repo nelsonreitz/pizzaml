@@ -25,9 +25,9 @@
             <td class="cart-size">
               <span class="item-size"><?= (isset($order['size'])) ? $order['size'] : '' ?></span>
             </td>
-            <td><input type="number" name="<?= $id ?>_qty" value="<?= $order['quantity'] ?>" min="1" max="<?= MAX_QUANT ?>"></td>
+            <td><input name="<?= $id ?>_qty" type="number" value="<?= $order['quantity'] ?>" min="1" max="<?= MAX_QUANT ?>"></td>
             <td class="cart-price"><?= number_format($order['price'] * $order['quantity'], 2) ?></td>
-            <td class="cart-remove"><input type="checkbox" name="remove[]" value="<?= $id ?>"></td>
+            <td class="cart-remove"><input name="remove[]" type="checkbox" value="<?= $id ?>"></td>
           </tr>
 
       <?php endforeach ?>
@@ -42,8 +42,8 @@
   </table>
 
   <div class="cart-submits">
-    <input class="button secondary" type="submit" name="update" value="Update Cart">
-    <input class="button primary" type="submit" name="checkout" value="Check Out">
+    <input class="button secondary" name="update" type="submit" value="Update Cart">
+    <input class="button primary" name="checkout" type="submit" value="Check Out">
   </div>
 
 </form>
