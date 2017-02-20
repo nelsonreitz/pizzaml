@@ -8,7 +8,7 @@
       <h2 class="item-name">Featured Item</h2>
       <p class="item-description">Featured Item description</p>
 
-      <form class="order-form" action="#" method="">
+      <form class="order-form">
 
       	<ul class="item-prices">
 
