@@ -1,6 +1,7 @@
 ## [Project0: PizzaML](http://pizzaml.nelsonreitz.ch)
 
-Live demonstration: [http://pizzaml.nelsonreitz.ch](http://project0.nelsonreitz.ch)
+- **[Live demonstration](http://pizzaml.nelsonreitz.ch)**
+- **[Design overview on Behance](https://www.behance.net/gallery/49168269/PizzaML)**
 
 This project is a fictive website built as an exercice for the [Computer Science E-75](http://cs75.tv) online course. The purpose of this
 exercise is to give an introduction to the MVC pattern and PHP.
